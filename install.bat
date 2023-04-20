@@ -21,7 +21,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 :: install vbs script to %UserProfile%
-echo CreateObject("Wscript.Shell").Run "PowerShell.exe ""$Process = Get-Process audiodg; $Process.ProcessorAffinity=1; $Process.PriorityClass=""""""High""""""""", 0, True > %UserProfile%\set-audiodg-affinity.vbs
+echo CreateObject("Wscript.Shell").Run "PowerShell.exe ""$Process = Get-Process audiodg; $Process.ProcessorAffinity=2; $Process.PriorityClass=""""""High""""""""", 0, True > %UserProfile%\set-audiodg-affinity.vbs
 :: Affinity table
 ::Core # = Value = BitMask
 ::Core 1 = 1 = 00000001
